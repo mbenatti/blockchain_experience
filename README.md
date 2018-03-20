@@ -1,21 +1,24 @@
 # Blockchain
 
-**TODO: Add description**
+ - A small Blockchain (not ready) in Elixir for Learn purposes (WIP)
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `blockchain_experience` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:blockchain_experience, "~> 0.1.0"}
-  ]
-end
+### Register
+```Elixir
+iex> Blockchain.register_node(self())
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/blockchain_experience](https://hexdocs.pm/blockchain_experience).
+### Create new transaction
+```Elixir
+iex> Blockchain.new_transaction "sender-address", "marcos-address", 100
+```
 
+### Mine
+```Elixir
+iex> Blockchain.mine
+```
+
+
+##### Ref:
+
+- [learn by building](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46)
+- [bitcoin white paper](https://bitcoin.org/bitcoin.pdf)
